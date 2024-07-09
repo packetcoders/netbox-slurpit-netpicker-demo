@@ -43,13 +43,13 @@ pip install -r requirements.txt
 You can now run either of the Nornir scripts:
 
 ```
-# Check NetBox is correctly sending inventory data.
+1. Check NetBox is correctly sending inventory data.
 python3 nornir/nr_check_inv.py
 
-# Render the Jinja templates using data from NetBoxs GraphQL.
+2. Render the Jinja templates using data from NetBoxs GraphQL.
 python3 nornir/nr_build.py
 
-# Deploy the config out to your devices within your inventory.
+3. Deploy the config out to your devices within your inventory.
 python3 nornir/nr_deploy.py
 ```
 
