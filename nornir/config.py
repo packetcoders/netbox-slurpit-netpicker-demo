@@ -1,9 +1,12 @@
 import os
 
 from dotenv import load_dotenv
+
 from nornir import InitNornir
 
 load_dotenv()
+
+print(os.getenv("NETBOX_FQDN"))
 
 nr = InitNornir(
     runner={"plugin": "threaded", "options": {"num_workers": 20}},
@@ -12,7 +15,8 @@ nr = InitNornir(
         "options": {
             "nb_url": os.getenv("NETBOX_FQDN"),
             "nb_token": os.getenv("NETBOX_TOKEN"),
-            "filter_parameters": {"tenant": "uber-coffees", "role": "spine"},
+            #"ssl_verify": False,
+            "filter_parameters": {"role": "spine", "tenant": "uber-coffees"},
             "use_platform_slug": True,
         },
     }
