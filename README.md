@@ -1,59 +1,54 @@
-# Slurp`it, Netpicker and NetBox Demo
 
-This repo contains the scripts and examples from the Packet Coders Tech Showcase around Slurp`it, Netpicker and NetBox.
+# Slurp'it, Netpicker, and NetBox Demo
 
-## Links
+This repository contains scripts and examples from the Packet Coders Tech Showcase featuring Slurp'it, Netpicker, and NetBox.
 
-To learn more about each of the tools within this example please see the links below:
+## Tools Overview
+
+Learn more about each tool showcased in this repository:
 
 - [NetBox](https://www.netboxlabs.com)
 - [Netpicker](https://www.netpicker.io)
 - [Slurp'it](https://www.slurpit.io)
 
+## Nornir, NAPALM, and GraphQL Setup
 
+> **Note:** The examples in this repository, including Jinja templates, are built for Cisco IOS devices.
 
-## Nornir, NAPALM and GraphQL Setup
+### 1. Create a Virtual Environment
 
-> [!NOTE]
-> The examples within this repo, the Jinja templates, etc have all been built for Cisco IOS devices.
-
-1. Create virtual environment
-
-```
+```bash
 python3 -m venv .venv
-source .venv/bin/activiate
+source .venv/bin/activate
 ```
 
-2. Update `.env`
+### 2. Update Environment Variables
 
-```
+```bash
 cp .env.example .env
 ```
 
-Next, update the `.env` with your settings for NetBox and your device credentials.
+Update the `.env` file with your NetBox settings and device credentials.
 
-3. Install depos
+### 3. Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-4. Run Nornir
+### 4. Run Nornir Scripts
 
-You can now run either of the Nornir scripts:
+You can now run any of the following Nornir scripts:
 
-```
 1. Check NetBox is correctly sending inventory data.
-python3 nornir/nr_check_inv.py
-
-2. Render the Jinja templates using data from NetBoxs GraphQL.
-python3 nornir/nr_build.py
-
+    ```bash
+    python3 nornir/nr_check_inv.py
+    ```
+2. Render the Jinja templates using data from NetBox's GraphQL.
+    ```bash
+    python3 nornir/nr_build.py
+    ```
 3. Deploy the config out to your devices within your inventory.
-python3 nornir/nr_deploy.py
-```
-
-
-
-
-
+    ```bash
+    python3 nornir/nr_deploy.py
+    ```
