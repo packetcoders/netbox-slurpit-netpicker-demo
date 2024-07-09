@@ -2,11 +2,15 @@
 
 This repo contains the scripts and examples from the Packet Coders Tech Showcase around Slurp`it, Netpicker and NetBox.
 
+## Links
+
 To learn more about each of the tools within this example please see the links below:
 
-[NetBox](https://www.netboxlabs.com)
-[Netpicker](https://www.netpicker.io)
-[Slurp'it](https://www.slurpit.io)
+- [NetBox](https://www.netboxlabs.com)
+- [Netpicker](https://www.netpicker.io)
+- [Slurp'it](https://www.slurpit.io)
+
+
 
 ## Nornir, NAPALM and GraphQL Setup
 
